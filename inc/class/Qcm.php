@@ -6,7 +6,7 @@
  * Time: 21:00
  */
 
-namespace Inc;
+
 
 
 class Qcm {

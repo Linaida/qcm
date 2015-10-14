@@ -1,3 +1,9 @@
+<?php
+$maSession = Session::getInstance();
+var_dump($maSession);
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -12,12 +18,25 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<!-- HEADER -->
+        <!-- HEADER -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand"   href="#">Connexion</a>
-                    
-                </div>	
+                    <a class="navbar-brand"   href= ".?action=destruct">Déconnexion</a>
+                </div>
+                <?php
+                if($maSession->read('etudiant')){
+                    require "inc/header_etudiant.php";}
+                ?>
+                <?php
+                if($maSession->read('professeur')){
+                    require "inc/header_professeur.php";
+                }
+                ?>
             </div> <!-- Fermeture container-fluid -->
+
         </nav> <!-- Fermeture navbar -->
+
+
+        <!-- CONTENT -->
+        <div class="container" id="content">

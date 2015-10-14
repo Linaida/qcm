@@ -6,8 +6,6 @@
  * Time: 21:05
  */
 
-namespace Inc;
-
 
 class Question_Reponse {
     private $id_question_reponse;
