@@ -1,6 +1,8 @@
 <?php
 
-require "inc/class/Database.php";
+require "inc/header.php";
+
+//require "inc/class/Personne.php";
 // 1 - Check si l'utilisateur est loggé
     // Si oui : envoyer l'utilisateur sur sa page d'accueil :
 /*
@@ -9,7 +11,15 @@ require "inc/class/Database.php";
 * */
     // Si non : envoyer l'utilisateur sur la page d'authentification :
    // else{ require "inc/auth.php"; }
+?>
+<div class="container" id="content">
+<div id="connexion">
+	<?php require "inc/auth.php"; ?>
+</div>
+    
 
-$myPdo = new Database();
+</div>
 
-echo var_dump($myPdo->query("Select * From personne"));
+
+<?php
+require "inc/footer.php";

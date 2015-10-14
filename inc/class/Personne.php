@@ -2,7 +2,7 @@
 
 namespace Inc;
 
-abstract class Personne{
+ class Personne{
     protected $id_personne;
     protected $login;
     protected $password;
@@ -22,7 +22,7 @@ abstract class Personne{
     protected function getRole(){
     return $this->role;
 }
-     abstract function consulter_qcm($qcm);
+    // abstract function consulter_qcm($qcm);
 
 }
 

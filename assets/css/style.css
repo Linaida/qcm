@@ -1,0 +1,10 @@
+/* Style.css */
+body{
+	background-color: #eee;
+}
+.radiobtn{
+	margin-bottom: 10px;
+}
+#content{
+	margin: 5% 5% 5% 5%;
+}
