@@ -17,7 +17,10 @@
             <a class="navbar-brand"   href="#">Modifier</a>
         </li>
         <li class="dropdown">
-            <a class="navbar-brand"  href="#">Supprimer</a>
+            <a class="navbar-brand"  href="#">Mes Questions/Réponses</a>
+        </li>
+        <li class="dropdown">
+            <a class="navbar-brand"  href="#">Mes QCM</a>
         </li>
     </ul>
 </div>

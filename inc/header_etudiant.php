@@ -7,16 +7,19 @@
  */
 ?>
 <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
         <li class="">
             <a class="navbar-brand"  href="#">Profil</a>
         </li>
         <li>
             <a class="navbar-brand"   href="#">Modifier</a>
         </li>
-        <li class="dropdown">
-            <a class="navbar-brand"  href="#">Supprimer</a>
+        <li class="">
+            <a class="navbar-brand"  href="#">Liste QCM</a>
         </li>
-      </ul>
-    </div>
+        <li class="">
+            <a class="navbar-brand"  href="#">Historique des QCM</a>
+        </li>
+    </ul>
+</div>

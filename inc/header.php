@@ -1,6 +1,5 @@
 <?php
 $maSession = Session::getInstance();
-var_dump($maSession);
 ?>
 
 
