@@ -14,13 +14,12 @@ if (isset($_POST['login'])) {
 
             $user = $myAuth->login($myPdo, $_POST['login'], $_POST['password']);
             if ($user->role == "etudiant") {
-                $user = new Etudiant($user);
-                $mySession->write("etudiant", $user);
+                $mySession->write("etudiant", new Etudiant($user));
 
             } else {
-                $user = new Professeur($user);
-                $mySession->write("professeur", $user);
+                $mySession->write("professeur", new Professeur($user));
             }
+
               header("location: ./index.php");
         }
     } catch (ErrorException $e) {
@@ -34,9 +33,9 @@ if (isset($_POST['login'])) {
 <h1>CONNEXION</h1><br>
 
 <!-- DEBUT FORMULAIRE -->
-<form role="form" action="#" method="POST">
+<form role="form" action="./index.php" method="POST">
 
-    <div class="form-group kxf">
+    <div class="form-group ">
 
         <label for="Login">Login</label>
 

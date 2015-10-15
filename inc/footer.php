@@ -12,5 +12,12 @@
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+<script language="javascript" type='text/javascript'>
+    function deconnexion_auto(){
+        $('#btn_deconnexion').get(0).click();
+        alert("Déconnexion automatique : cause inactivité")
+    }
+    setTimeout("deconnexion_auto()",900000);
+</script>
 </body>
 </html>

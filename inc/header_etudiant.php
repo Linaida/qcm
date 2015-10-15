@@ -21,5 +21,8 @@
         <li class="">
             <a class="navbar-brand"  href="#">Historique des QCM</a>
         </li>
+        <li>
+            <a id="btn_deconnexion" class="navbar-brand"   href= ".?action=destruct">Déconnexion</a>
+        </li>
     </ul>
 </div>

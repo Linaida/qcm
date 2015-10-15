@@ -19,8 +19,11 @@
         <li class="dropdown">
             <a class="navbar-brand"  href="#">Mes Questions/Réponses</a>
         </li>
-        <li class="dropdown">
+        <li class="">
             <a class="navbar-brand"  href="#">Mes QCM</a>
+        </li>
+        <li>
+            <a id="btn_deconnexion" class="navbar-brand"   href= ".?action=destruct">Déconnexion</a>
         </li>
     </ul>
 </div>

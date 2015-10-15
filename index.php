@@ -22,20 +22,19 @@ if (isset($_GET['action']) && $_GET['action'] == "destruct") {
 
 if ($maSession->read('auth')) {
 
-    if ($maSession->read('etudiant')) {
+    if (isset($_SESSION['etudiant']) && !empty($_SESSION['etudiant'])) {
         require "inc/page/home_etudiant.php";
     }
 
-    if ($maSession->read('professeur')) {
-        require "inc/page/home_professeur.php";
+    if (isset($_SESSION['professeur']) && !empty($_SESSION['professeur'])) {
+        require "./inc/page/home_professeur.php";
     }
-    // Si c'est une deconnexion
 
-} else {  // Si non : envoyer l'utilisateur sur la page d'authentification :
-    require "inc/page/auth.php";
-}
+    } else {
+        // Si non : envoyer l'utilisateur sur la page d'authentification :
+        require "inc/page/auth.php";
+    }
+
+    require "inc/footer.php";
+
 ?>
-
-
-
-<?php require "inc/footer.php"; ?>

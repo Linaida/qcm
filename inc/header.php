@@ -21,7 +21,7 @@ $maSession = Session::getInstance();
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand"   href= ".?action=destruct">Déconnexion</a>
+
                 </div>
                 <?php
                 if($maSession->read('etudiant')){
