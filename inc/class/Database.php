@@ -32,6 +32,14 @@ class Database {
         }
         return $req;
     }
+    public function get_personne($id){
+        $query = "SELECT * FROM personne WHERE id =$id";
+        return $this->query($query);
+    }
+    public function edit_personne($user){
+        $query ="UPDATE `nvl9284a`.`personne` SET `login` = $user->getLogin(), `password` = $user->getPasswor(), `email` = $user->getEmail() WHERE `personne`.`id` = $user->getIdPersonne();";
+        return $this->query($query);
+    }
 
     public function lastInsertId(){
         return $this->pdo->lastInsertId();

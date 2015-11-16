@@ -13,9 +13,6 @@
         <li class="">
             <a class="navbar-brand"  href="#">Profil</a>
         </li>
-        <li>
-            <a class="navbar-brand"   href="#">Modifier</a>
-        </li>
         <li class="dropdown">
             <a class="navbar-brand"  href="#">Mes Questions/Réponses</a>
         </li>

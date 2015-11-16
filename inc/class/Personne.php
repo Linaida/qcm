@@ -14,7 +14,7 @@
          $this->password = $user->password;
          $this->email = $user->email;
          $this->role = $user->role;
-         $this->id_personne = $user->id;
+         $this->id_personne = $user->id_personne;
      }
 
      /**
@@ -25,6 +25,10 @@
          $this->id_personne = $id_personne;
      }
 
+     public function getIdPersonne()
+     {
+         return $this->id_personne;
+     }
 
      public function getLogin(){
      return $this->login;

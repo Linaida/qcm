@@ -15,37 +15,21 @@ $pdo = new Database();
 
 <div id="div_home_professeur">
     <h2>Bienvenue <strong><?php echo $currentUser->getLogin(); ?></strong></h2>
-    <table>
-       <thead>
-       <tr>
-           <td>Titre</td>
-           <td>Réponses</td>
-           <td>Thème</td>
-       </tr>
-       </thead>
-        <tbody>
-        <?php
+    <div class="menu_prof">
+        <a href="#" onclick="switch_div('#div_profil')" class="btn btn-primary">Consulter votre profil</a>
+        <a href="#" onclick="switch_div('#div_questions_reponses')"  class="btn btn-primary" class="menu_prof">Consulter vos questions / réponses</a>
+        <a href="#" onclick="switch_div('#div_qcm')"  class="btn btn-primary">Consulter vos QCM</a>
+    </div>
+    <div id="div_profil" class="hide">
+        <?php require 'inc/page/professeur/div_profil.php'; ?>
+    </div>
 
-        $myQuestions = $currentUser->consulter_question($pdo);
+    <div id="div_questions_reponses" class="hide">
+        <?php require 'inc/page/professeur/div_questions_reponses.php'; ?>
+    </div>
+    <div id="div_qcm" class="hide">
+        <?php require 'inc/page/professeur/div_qcm.php'; ?>
 
-        foreach($myQuestions as $question){
-            ?>
-<tr>
-    <td><?php echo $question->titre; ?></td>
-    <td><?php echo $question->reponse; ?></td>
-    <td><?php echo $question->theme; ?></td>
-</tr>
-        <?php
-        }
+    </div>
 
-        ?>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tfoot>
-    </table>
 </div>

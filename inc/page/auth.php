@@ -13,6 +13,7 @@ if (isset($_POST['login'])) {
         if ($myValidator->isValid()) {
 
             $user = $myAuth->login($myPdo, $_POST['login'], $_POST['password']);
+            $mySession->write("personne", new Personne($user));
             if ($user->role == "etudiant") {
                 $mySession->write("etudiant", new Etudiant($user));
 
