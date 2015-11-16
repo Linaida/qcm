@@ -32,6 +32,7 @@ $maSession = Session::getInstance();
                     require "inc/header_professeur.php";
                 }
                 ?>
+
             </div> <!-- Fermeture container-fluid -->
 
         </nav> <!-- Fermeture navbar -->

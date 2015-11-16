@@ -22,6 +22,7 @@ $user = $myPdo->get_personne($_POST['id_personne']);
     $myPdo->edit_personne($user);
 }
 
+
 // 1 - Check si l'utilisateur est loggé
 // Si oui : envoyer l'utilisateur sur sa page d'accueil :
 

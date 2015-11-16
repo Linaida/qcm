@@ -3,6 +3,7 @@
 
  class Personne{
     protected $id_personne;
+  //  protected $id;
     protected $login;
     protected $password;
     protected $email;
@@ -14,7 +15,8 @@
          $this->password = $user->password;
          $this->email = $user->email;
          $this->role = $user->role;
-         $this->id_personne = $user->id_personne;
+         $this->id_personne = $user->id;
+      //   $this->$id = $user->$id;
      }
 
      /**
@@ -27,7 +29,7 @@
 
      public function getIdPersonne()
      {
-         return $this->id_personne;
+         return $this->id_personned;
      }
 
      public function getLogin(){

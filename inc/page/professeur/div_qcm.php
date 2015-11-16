@@ -6,7 +6,15 @@
  * Time: 10:10
  */
 ?>
-<table>
+
+<?php
+try{
+    ?>
+
+    <?php
+    $myQuestions = $currentUser->consulter_question($pdo);
+    ?>
+    <table>
     <thead>
     <tr>
         <td>Titre</td>
@@ -16,9 +24,6 @@
     </thead>
     <tbody>
     <?php
-
-    $myQuestions = $currentUser->consulter_question($pdo);
-
     foreach($myQuestions as $question){
 
         ?>
@@ -27,16 +32,28 @@
             <td><?php echo $question->reponses; ?></td>
             <td><?php echo $question->theme; ?></td>
         </tr>
-        <?php
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tfoot>
+        </table>
+    <?php
     }
 
+}catch (Exception $e){
     ?>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    </tfoot>
-</table>
+    <div id="msg_alert" class="alert alert-danger alert-dismissible " role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Attention !</strong>
+        <span id="error_msg"><?php echo $e->getMessage()."\n\r";   ?></span>
+        <span id="empty_msg"></span>
+    </div>
+<?php }?>
+

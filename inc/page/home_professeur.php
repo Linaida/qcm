@@ -7,7 +7,7 @@
  */
 if(isset($_SESSION['professeur']))
     $currentUser = $_SESSION['professeur'];
-
+//var_dump($_SESSION['professeur']);
 $maSession = Session::getInstance();
 $pdo = new Database();
 ?>

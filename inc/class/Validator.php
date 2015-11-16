@@ -28,6 +28,7 @@ class Validator
     {
         if (!filter_var($this->getField($field), FILTER_VALIDATE_EMAIL)) {
             $this->errors[$field] = $errorMsg;
+           // throw new ErrorException("Email incorrect");
             return false;
         }
         return true;

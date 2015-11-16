@@ -4,6 +4,7 @@
 
 class Professeur extends Personne {
     protected $id_personne;
+   // protected $id;
     protected $login;
     protected $password;
     protected $email;
@@ -24,9 +25,17 @@ class Professeur extends Personne {
       }
 
     public  function consulter_question($database){
-        $datas = $database->query('SELECT * FROM question_reponse WHERE (auteur_id = :id)', ['id' => $this->id_personne])->fetchAll();
+        //$datas = $database->query('SELECT * FROM question_reponse WHERE (auteur_id = :id)', ['id' => $this->id_personne])->fetchAll();
+        //echo $this->id
+        $query = "SELECT * FROM question_reponse WHERE auteur_id = .$this->id_personne " ;
+        try{
+            $datas = $database->query($query)->fetchAll();
+        }catch (PDOException $e){
+            var_dump($e);
+        }
+
         if(!$datas)
-        throw new ErrorException("Impossible de récupérer les questions");
+        throw new Exception("Vous n'avez pas encore créer de question_reponse");
     return $datas;
     }
     public  function creer_qcm($qcm){}
