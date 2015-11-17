@@ -31,11 +31,9 @@ class Professeur extends Personne {
         try{
             $datas = $database->query($query)->fetchAll();
         }catch (PDOException $e){
-            var_dump($e);
+            throw new Exception("Vous n'avez pas encore créer de question_reponse");
         }
 
-        if(!$datas)
-        throw new Exception("Vous n'avez pas encore créer de question_reponse");
     return $datas;
     }
     public  function creer_qcm($qcm){}
