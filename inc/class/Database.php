@@ -11,7 +11,7 @@ class Database {
 
     private $pdo;
 
-    function __construct($db_name='db322671_qcm', $db_user='db83538', $db_password='proview1009', $db_host='db322671-qcm.sql-pro.online.net')
+    function __construct($db_name='db322671_qcm', $db_user='db83538', $db_password='password', $db_host='db322671-qcm.sql-pro.online.net')
     {
         $this->pdo = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user, $db_password);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
